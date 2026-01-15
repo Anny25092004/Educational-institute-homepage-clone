@@ -1,0 +1,350 @@
+  
+         :root {
+            --primary: #0c2e60;
+            --accent: #ee390f;
+            --light-green: #20b2aa;
+            --gradient: linear-gradient(90deg, #ee390f 0%, #f9b700 100%);
+            --text-gray: #777;
+            --bg-light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links li {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--primary);
+            transition: color 0.3s;
+        }
+
+        .nav-links li:hover {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .login-btn {
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            background: var(--gradient);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            background: white;
+            color: var(--light-green);
+            border: 2px solid var(--light-green);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        #sec1 {
+            min-height: 90vh;
+            padding: 120px 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-image: url("https://analyzeinfotech.in/assets/newassets/img/banner_bg.png");
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 45%;
+        }
+
+        #content1 {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        #p1 {
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        #content1 h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        #p2 {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        #p2-inner {
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-main {
+            padding: 12px 30px;
+            background: var(--gradient);
+            border-radius: 25px;
+            border: 2px solid transparent;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-main:hover {
+            background: white;
+            color: var(--light-green);
+            border: 2px solid var(--light-green);
+        }
+
+        #img1 {
+            flex: 1;
+            height: 450px;
+            background: url("https://analyzeinfotech.in/assets/newassets/img/banner_img.png") no-repeat center;
+            background-size: contain;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .tech-card {
+            height: 100%;
+            min-height: 280px;
+            padding: 25px 20px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .tech-card img {
+            margin-bottom: 15px;
+            flex-shrink: 0;
+          height: 100px;
+            width: auto;  
+            object-fit: contain;
+        }
+
+        .tech-card h1 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            flex-shrink: 0;
+        }
+
+        .tech-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        #sec3 {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        #yt-video {
+            flex: 1;
+        }
+
+        #yt-video iframe {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        #content3 {
+            flex: 1;
+        }
+
+        #sec4 {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        #orangebox {
+            background: var(--gradient);
+            display: flex;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #f1f1f1;
+            text-align: center;
+            padding: 40px;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                padding: 40px;
+                transition: left 0.4s ease;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .login-btn {
+                display: none;
+            }
+
+            #sec1 {
+                flex-direction: column;
+                text-align: center;
+                background-position: center;
+            }
+
+            #content1 h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn-group {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            #sec3 {
+                flex-direction: column;
+            }
+
+            .stat-item {
+                font-size: 1.4rem;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
